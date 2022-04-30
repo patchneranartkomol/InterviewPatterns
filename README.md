@@ -3,6 +3,23 @@ This is a list of implementations of data structures, algorithms, and solutions 
 
 Hopefully, this list serves as a demonstration of learning psychology. The purpose of this list is to created and refined, but not to be reviewed, except as an outline, to help create a hierarchical structure of relevant concepts - arrays as building blocks for hash tables, or trees as a subset of graphs.
 
+## Running Examples
+For now, there are Python3 examples in each subfolder, pertaining to a topic. There's no libraries to install, so as long as you have Python3 installed, you can run any of them code samples. For instance:
+
+```
+python arrays-and-hashing/contains_duplicate.py
+
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+
+```
+
+TODO: It may make more sense to create a test runner.
+
+
 ## Addendum on Learning
 In some models of learning psychology, there are 3 stages of memory processing - encoding, storage, and retrieval.
 
