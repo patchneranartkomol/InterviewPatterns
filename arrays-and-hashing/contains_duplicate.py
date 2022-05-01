@@ -3,6 +3,16 @@ from typing import List
 
 
 class Solution:
+    """
+    https://leetcode.com/problems/contains-duplicate/
+
+    Iterate through the list once to store in a set (hash table).
+    The size of the set grows with each unique value.
+
+    Time Complexity: O(N)
+    Space Complexity: O(N)
+    N - size of input list
+    """
     def containsDuplicate(self, nums: List[int]) -> bool:
         return True if len(nums) > len(set(nums)) else False
 

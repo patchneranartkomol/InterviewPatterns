@@ -4,6 +4,22 @@ from collections import defaultdict
 from typing import Dict, List, Set
 
 class Solution:
+    """
+    https://leetcode.com/problems/evaluate-division/
+
+    Each equation given to us represents an edge in an undirected, weighted graph.
+    Each query asks us to find if there is a path between two vertices, and calculate its weight if present.
+
+    We iterate through equations and values to construct the graph.
+
+    For each query, we use depth-first search to find a path and calculate its value, or confirm there is no path.
+
+    Time Complexity - O(Q* N)
+    Space Complexity - O(N)
+
+    N - length of equations
+    Q - length of queries
+    """
     def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
         graph = self.buildGraph(equations, values)
         return [self.dfs(s, e, set(), graph, 1.0) for s, e in queries]
