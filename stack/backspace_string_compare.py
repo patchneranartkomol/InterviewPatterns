@@ -85,37 +85,37 @@ class TestSolution(TestCase):
     solution = Solution()
     solution2 = Solution2()
 
-    def test_same_input(self):
+    def testSameInput(self):
         s = "ab#c"
         t = "ad#c"
         self.assertTrue(self.solution.backspaceCompare(s,t))
         self.assertTrue(self.solution2.backspaceCompare(s,t))
 
-    def test_same_input_empty_final_string(self):
+    def testSameInputEmptyFinalString(self):
         s = "ab##"
         t = "y#x#"
         self.assertTrue(self.solution.backspaceCompare(s,t))
         self.assertTrue(self.solution2.backspaceCompare(s,t))
 
-    def test_different_input(self):
+    def testDifferentInput(self):
         s = "a#c"
         t = "g"
         self.assertFalse(self.solution.backspaceCompare(s,t))
         self.assertFalse(self.solution2.backspaceCompare(s,t))
 
-    def test_backspaces_until_empty(self):
+    def testBackspacesUntilEmpty(self):
         s = "bxj##tw"
         t = "bxj###tw"
         self.assertFalse(self.solution.backspaceCompare(s,t))
         self.assertFalse(self.solution2.backspaceCompare(s,t))
 
-    def test_backspaces_past_empty(self):
+    def testBackspacesPastEmpty(self):
         s = "bxj##tw"
         t = "bxj####tw"
         self.assertFalse(self.solution.backspaceCompare(s,t))
         self.assertFalse(self.solution2.backspaceCompare(s,t))
 
-    def test_backspaces_past_empty_equal(self):
+    def testBackspacesPastEmptyEqual(self):
         s = "bxj#####tw"
         t = "bxj######tw"
         self.assertTrue(self.solution.backspaceCompare(s,t))

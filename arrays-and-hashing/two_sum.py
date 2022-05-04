@@ -36,22 +36,22 @@ class Solution:
 class TestSolution(TestCase):
     solution = Solution()
 
-    def test_input_1(self):
+    def testInput1(self):
         input_arr = [2,7,11,15]
         target = 9
         self.assertEquals(self.solution.twoSum(input_arr, target), [0, 1])
 
-    def test_input_2(self):
+    def testInput2(self):
         input_arr = [3,2,4]
         target = 6
         self.assertEquals(self.solution.twoSum(input_arr, target), [1, 2])
 
-    def test_input_3(self):
+    def testInput3(self):
         input_arr = [2,7,11,15]
         target = 22
         self.assertEquals(self.solution.twoSum(input_arr, target), [1, 3])
 
-    def test_input_with_duplicate(self):
+    def testInputWithDuplicate(self):
         input_arr = [3,2,3]
         target = 6
         self.assertEquals(sorted(self.solution.twoSum(input_arr, target)), [0, 2])

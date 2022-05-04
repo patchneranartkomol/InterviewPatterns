@@ -37,12 +37,12 @@ class Solution:
 class TestSolution(TestCase):
     solution = Solution()
 
-    def test_anagram(self):
+    def testAnagram(self):
         s = "anagram"
         t = "nagaram"
         self.assertTrue(self.solution.isAnagram(s, t))
 
-    def test_not_anagram(self):
+    def testNotAnagram(self):
         s = "rat"
         t = "car"
         self.assertFalse(self.solution.isAnagram(s, t))

@@ -48,18 +48,17 @@ class Solution:
 class TestSolution(TestCase):
     solution = Solution()
 
-    def test_input_1(self):
+    def testInput1(self):
         equations = [["a","b"],["b","c"]]
         values = [2.0,3.0]
         queries = [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]
         self.assertEqual([6.0, 0.5, -1.0, 1.0, -1.0], self.solution.calcEquation(equations, values, queries))
 
-    def test_input_2(self):
+    def testInput2(self):
         equations = [["a","b"],["b","c"],["bc","cd"]]
         values =  [1.5, 2.5, 5.0]
         queries = [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]
         self.assertEqual([3.75000, 0.40000, 5.00000, 0.20000], self.solution.calcEquation(equations, values, queries))
-
 
 
 if __name__ == '__main__':
