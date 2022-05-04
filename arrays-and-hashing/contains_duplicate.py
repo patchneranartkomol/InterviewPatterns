@@ -1,4 +1,4 @@
-from unittest import main, TestCase
+from unittest import TestCase
 from typing import List
 
 
@@ -35,7 +35,3 @@ class TestSolution(TestCase):
     def testLongerArrayWithDuplicates(self):
         longer_array_with_duplicates = [1,1,1,3,3,4,3,2,4,2]
         self.assertTrue(self.solution.containsDuplicate(longer_array_with_duplicates))
-
-
-if __name__ == '__main__':
-    main()

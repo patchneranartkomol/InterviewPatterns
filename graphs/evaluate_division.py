@@ -1,4 +1,4 @@
-from unittest import main, TestCase
+from unittest import TestCase
 
 from collections import defaultdict
 from typing import Dict, List, Set
@@ -59,7 +59,3 @@ class TestSolution(TestCase):
         values =  [1.5, 2.5, 5.0]
         queries = [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]
         self.assertEqual([3.75000, 0.40000, 5.00000, 0.20000], self.solution.calcEquation(equations, values, queries))
-
-
-if __name__ == '__main__':
-    main()

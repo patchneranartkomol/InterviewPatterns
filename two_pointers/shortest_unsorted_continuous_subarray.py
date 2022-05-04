@@ -1,4 +1,4 @@
-from unittest import main, TestCase
+from unittest import TestCase
 from typing import List
 
 
@@ -54,7 +54,3 @@ class TestSolution(TestCase):
     def testInput1(self):
         array = [2,6,4,8,10,9,15]
         self.assertEquals(5, self.solution.findUnsortedSubarray(array))
-
-
-if __name__ == '__main__':
-    main()

@@ -1,4 +1,4 @@
-from unittest import main, TestCase
+from unittest import TestCase
 from typing import List
 
 

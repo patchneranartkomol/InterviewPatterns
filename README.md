@@ -1,24 +1,25 @@
 # Interview Patterns
 This is a list of implementations of data structures, algorithms, and solutions to problems using those building blocks. There are many lists and resources out there, and this one is no different.
 
-Hopefully, this list serves as a demonstration of learning psychology. The purpose of this list is to created and refined, but not to be reviewed, except as an outline, to help create a hierarchical structure of relevant concepts - arrays as building blocks for hash tables, or trees as a subset of graphs.
+Hopefully, this list serves as a demonstration of learning psychology. The purpose of this list is to created and refined, but not to be reviewed, except as an outline, to help create a hierarchical structure of relevant concepts.
 
 ## Running Examples
-For now, there are Python3 examples in each subfolder, pertaining to a topic. There's no libraries to install, so as long as you have Python3 installed, you can run any of them code samples. For instance:
+For now, there are Python3 examples in each subfolder, pertaining to a topic. There's no libraries to install, so as long as you have Python3 installed, you can run any of them code samples.
 
+To run all tests in the repo:
 ```
-python arrays-and-hashing/contains_duplicate.py
-
-....
-----------------------------------------------------------------------
-Ran 4 tests in 0.000s
-
-OK
-
+python -m unittest discover -p "*.py"
 ```
 
-TODO: It may make more sense to create a test runner.
+To run all tests in a directory:
+```
+python -m unittest arrays-and-hashing
+```
 
+To run a single module:
+```
+python -m unittest arrays-and-hashing.contains_duplicate
+```
 
 ## Addendum on Learning
 In some models of learning psychology, there are 3 stages of memory processing - encoding, storage, and retrieval.

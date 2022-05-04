@@ -1,5 +1,5 @@
 from collections import Counter
-from unittest import main, TestCase
+from unittest import TestCase
 
 
 class Solution:
@@ -46,7 +46,3 @@ class TestSolution(TestCase):
         s = "rat"
         t = "car"
         self.assertFalse(self.solution.isAnagram(s, t))
-
-
-if __name__ == '__main__':
-    main()

@@ -1,4 +1,4 @@
-from unittest import main, TestCase
+from unittest import TestCase
 from typing import List
 
 
@@ -120,7 +120,3 @@ class TestSolution(TestCase):
         t = "bxj######tw"
         self.assertTrue(self.solution.backspaceCompare(s,t))
         self.assertTrue(self.solution2.backspaceCompare(s,t))
-
-
-if __name__ == '__main__':
-    main()
