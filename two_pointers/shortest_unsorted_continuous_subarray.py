@@ -49,8 +49,8 @@ class TestSolution(TestCase):
 
     def testSortedInput(self):
         array = [1,2,3,5,10]
-        self.assertEquals(0, self.solution.findUnsortedSubarray(array))
+        self.assertEqual(0, self.solution.findUnsortedSubarray(array))
 
     def testInput1(self):
         array = [2,6,4,8,10,9,15]
-        self.assertEquals(5, self.solution.findUnsortedSubarray(array))
+        self.assertEqual(5, self.solution.findUnsortedSubarray(array))
