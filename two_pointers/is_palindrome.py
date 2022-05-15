@@ -69,10 +69,10 @@ class TestSolution(TestCase):
         self.assertTrue(self.solution.isPalindrome(string))
         self.assertTrue(self.solution2.isPalindrome(string))
 
-    def testInValidPalindromeWithNonAlphanumericChars(self):
+    def testInvalidPalindromeWithNonAlphanumericChars(self):
         string = "a  z."
-        self.assertTrue(self.solution.isPalindrome(string))
-        self.assertTrue(self.solution2.isPalindrome(string))
+        self.assertFalse(self.solution.isPalindrome(string))
+        self.assertFalse(self.solution2.isPalindrome(string))
 
     def testValidEmptyPalindromeWithNonAlphanumericChars(self):
         string = "  ."
