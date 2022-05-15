@@ -1,5 +1,6 @@
 # Interview Patterns
 [![Build Status](https://app.travis-ci.com/patchneranartkomol/InterviewPatterns.svg?branch=main)](https://app.travis-ci.com/patchneranartkomol/InterviewPatterns)
+[![Coverage Status](https://coveralls.io/repos/github/patchneranartkomol/InterviewPatterns/badge.svg?branch=main)](https://coveralls.io/github/patchneranartkomol/InterviewPatterns?branch=main)
 
 This is a list of implementations of data structures, algorithms, and solutions to problems using those building blocks. There are many lists and resources out there, and this one is no different.
 
@@ -28,15 +29,20 @@ To run a single test case:
 python -m unittest arrays-and-hashing.contains_duplicate.TestSolution.test_contains_duplicates
 ```
 
-## Linting
-Using [yapf](https://github.com/google/yapf) for formatting. To install for this project, create and activate a virtual env.
+## Build Tooling
+To install build tools for this project, create a virtual environment (1-time setup):
 ```
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Then run the linter over a file or recursively over a folder of choice.
+This is currently used for linting and code coverage tests.
+
+### Linting
+Using [yapf](https://github.com/google/yapf) for formatting.
+
+Run the linter over a file or recursively over a folder of choice.
 ```
 yapf -i [file.py]
 yapf -ir [folder]
@@ -44,7 +50,13 @@ yapf -ir [folder]
 
 TODO: Add a pre-commit hook to run the linter.
 
-## Addendum on Learning
+### Test Coverage
+```
+coverage run -m unittest discover -p "*.py"
+coverage report
+```
+
+### Addendum on Learning
 In some models of learning psychology, there are 3 stages of memory processing - encoding, storage, and retrieval.
 
 Effective encoding is the key to storing and working information effectively.
