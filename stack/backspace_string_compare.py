@@ -16,10 +16,11 @@ class Solution:
     M - size of input string t
     """
 
-    def backspaceCompare(self, s: str, t: str) -> bool:
-        return self.evaluateBackspaceString(s) == self.evaluateBackspaceString(t)
+    def backspace_compare(self, s: str, t: str) -> bool:
+        return self.evalute_backspace_string(s) == self.evalute_backspace_string(
+            t)
 
-    def evaluateBackspaceString(self, s: str) -> List[str]:
+    def evalute_backspace_string(self, s: str) -> List[str]:
         stack = []
         for char in s:
             if char == '#':
@@ -45,7 +46,8 @@ class Solution2:
     Time Complexity: O(N + M)
     Space Complexity: O(1)
     """
-    def backspaceCompare(self, s: str, t: str) -> bool:
+
+    def backspace_compare(self, s: str, t: str) -> bool:
         i, j = len(s) - 1, len(t) - 1
         deletes_s = deletes_t = 0
         while i >= 0 or j >= 0:
@@ -80,43 +82,42 @@ class Solution2:
         return True
 
 
-
 class TestSolution(TestCase):
     solution = Solution()
     solution2 = Solution2()
 
-    def testSameInput(self):
+    def test_same_input(self):
         s = "ab#c"
         t = "ad#c"
-        self.assertTrue(self.solution.backspaceCompare(s,t))
-        self.assertTrue(self.solution2.backspaceCompare(s,t))
+        self.assertTrue(self.solution.backspace_compare(s, t))
+        self.assertTrue(self.solution2.backspace_compare(s, t))
 
-    def testSameInputEmptyFinalString(self):
+    def test_same_input_empty_final_string(self):
         s = "ab##"
         t = "y#x#"
-        self.assertTrue(self.solution.backspaceCompare(s,t))
-        self.assertTrue(self.solution2.backspaceCompare(s,t))
+        self.assertTrue(self.solution.backspace_compare(s, t))
+        self.assertTrue(self.solution2.backspace_compare(s, t))
 
-    def testDifferentInput(self):
+    def test_different_input(self):
         s = "a#c"
         t = "g"
-        self.assertFalse(self.solution.backspaceCompare(s,t))
-        self.assertFalse(self.solution2.backspaceCompare(s,t))
+        self.assertFalse(self.solution.backspace_compare(s, t))
+        self.assertFalse(self.solution2.backspace_compare(s, t))
 
-    def testBackspacesUntilEmpty(self):
+    def test_backspaces_until_empty(self):
         s = "bxj##tw"
         t = "bxj###tw"
-        self.assertFalse(self.solution.backspaceCompare(s,t))
-        self.assertFalse(self.solution2.backspaceCompare(s,t))
+        self.assertFalse(self.solution.backspace_compare(s, t))
+        self.assertFalse(self.solution2.backspace_compare(s, t))
 
-    def testBackspacesPastEmpty(self):
+    def test_backspaces_past_empty(self):
         s = "bxj##tw"
         t = "bxj####tw"
-        self.assertFalse(self.solution.backspaceCompare(s,t))
-        self.assertFalse(self.solution2.backspaceCompare(s,t))
+        self.assertFalse(self.solution.backspace_compare(s, t))
+        self.assertFalse(self.solution2.backspace_compare(s, t))
 
-    def testBackspacesPastEmptyEqual(self):
+    def test_backspaces_past_empty_equal(self):
         s = "bxj#####tw"
         t = "bxj######tw"
-        self.assertTrue(self.solution.backspaceCompare(s,t))
-        self.assertTrue(self.solution2.backspaceCompare(s,t))
+        self.assertTrue(self.solution.backspace_compare(s, t))
+        self.assertTrue(self.solution2.backspace_compare(s, t))

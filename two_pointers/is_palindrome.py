@@ -18,7 +18,7 @@ class Solution:
     Space Complexity: O(1)
     N - size of input list
     """
-    def isPalindrome(self, s: str) -> bool:
+    def is_palindrome(self, s: str) -> bool:
         left, right = 0, len(s) - 1
         while left < right:
             while not s[left].isalnum() and left < right:
@@ -42,7 +42,7 @@ class Solution2:
     Space Complexity: O(N) - building another string of worst case length N
     N - size of input list
     """
-    def isPalindrome(self, s: str) -> bool:
+    def is_palindrome(self, s: str) -> bool:
         s = re.sub(r'\W+', '', s).lower()
         for i in range(len(s) // 2):
             if s[i] is not s[-(i + 1)]:
@@ -54,27 +54,27 @@ class TestSolution(TestCase):
     solution = Solution()
     solution2 = Solution2()
 
-    def testValidPalindromeWithoutNonAlphanumericChars(self):
+    def test_valid_palindrome(self):
         string = "racecar"
-        self.assertTrue(self.solution.isPalindrome(string))
-        self.assertTrue(self.solution2.isPalindrome(string))
+        self.assertTrue(self.solution.is_palindrome(string))
+        self.assertTrue(self.solution2.is_palindrome(string))
 
-    def testInvalidPalindromeWithoutNonAlphanumericChars(self):
+    def test_invalid_palindrome(self):
         string = "racecara"
-        self.assertFalse(self.solution.isPalindrome(string))
-        self.assertFalse(self.solution2.isPalindrome(string))
+        self.assertFalse(self.solution.is_palindrome(string))
+        self.assertFalse(self.solution2.is_palindrome(string))
 
-    def testValidPalindromeWithNonAlphanumericChars(self):
+    def test_valid_palindrome_with_nonalnum_chars(self):
         string = "A man, a plan, a canal: Panama"
-        self.assertTrue(self.solution.isPalindrome(string))
-        self.assertTrue(self.solution2.isPalindrome(string))
+        self.assertTrue(self.solution.is_palindrome(string))
+        self.assertTrue(self.solution2.is_palindrome(string))
 
-    def testInvalidPalindromeWithNonAlphanumericChars(self):
+    def test_invalid_palindrome_with_nonalnum_chars(self):
         string = "a  z."
-        self.assertFalse(self.solution.isPalindrome(string))
-        self.assertFalse(self.solution2.isPalindrome(string))
+        self.assertFalse(self.solution.is_palindrome(string))
+        self.assertFalse(self.solution2.is_palindrome(string))
 
-    def testValidEmptyPalindromeWithNonAlphanumericChars(self):
+    def test_valid_empty_palindrome_with_nonalnum_chars(self):
         string = "  ."
-        self.assertTrue(self.solution.isPalindrome(string))
-        self.assertTrue(self.solution2.isPalindrome(string))
+        self.assertTrue(self.solution.is_palindrome(string))
+        self.assertTrue(self.solution2.is_palindrome(string))

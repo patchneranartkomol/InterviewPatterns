@@ -3,6 +3,7 @@ from typing import Optional
 
 from .treenode import TreeNode
 
+
 class Solution:
     """
     https://leetcode.com/problems/invert-binary-tree/
@@ -24,17 +25,19 @@ class Solution:
     h - Height of tree. This can be at best O(log(N)) for a balanced tree
     or O(N) the degenerate case, a linked list, or completely imbalanced tree
     """
-    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+
+    def invert_tree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if not root:
             return root
-        root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+        root.left, root.right = self.invert_tree(root.right), self.invert_tree(
+            root.left)
         return root
 
 
 class TestSolution(TestCase):
     solution = Solution()
 
-    def testTreeDepthOf3(self):
+    def test_tree_depth_of_3(self):
         """
         [4,2,7,1,3,6,9]
                4
@@ -60,7 +63,7 @@ class TestSolution(TestCase):
         tree.left.right = TreeNode(3)
         tree.right.left = TreeNode(6)
         tree.right.right = TreeNode(9)
-        self.solution.invertTree(tree)
+        self.solution.invert_tree(tree)
         self.assertEqual(4, tree.val)
         self.assertEqual(7, tree.left.val)
         self.assertEqual(2, tree.right.val)
@@ -69,21 +72,21 @@ class TestSolution(TestCase):
         self.assertEqual(3, tree.right.left.val)
         self.assertEqual(1, tree.right.right.val)
 
-    def testTreeDepthOf2(self):
+    def test_tree_depth_of_2(self):
         tree = TreeNode(2)
         tree.left = TreeNode(1)
         tree.right = TreeNode(3)
-        self.solution.invertTree(tree)
+        self.solution.invert_tree(tree)
         self.assertEqual(2, tree.val)
         self.assertEqual(3, tree.left.val)
         self.assertEqual(1, tree.right.val)
 
-    def testTreeDepthOf1(self):
+    def test_tree_depth_of_1(self):
         tree = TreeNode(0)
-        self.solution.invertTree(tree)
+        self.solution.invert_tree(tree)
         self.assertEqual(0, tree.val)
 
-    def testEmptyTree(self):
+    def test_empty_tree(self):
         tree = None
-        self.solution.invertTree(tree)
+        self.solution.invert_tree(tree)
         self.assertIsNone(tree)

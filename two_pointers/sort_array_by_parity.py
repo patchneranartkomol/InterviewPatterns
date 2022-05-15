@@ -14,7 +14,8 @@ class Solution:
     Space Complexity: O(1)
     N - size of input list
     """
-    def sortArrayByParity(self, nums: List[int]) -> List[int]:
+
+    def sort_array_by_parity(self, nums: List[int]) -> List[int]:
         start = 0
         for i in range(len(nums)):
             if nums[i] % 2 == 0:
@@ -26,16 +27,18 @@ class Solution:
 class TestSolution(TestCase):
     solution = Solution()
 
-    def testArrayOfLen1(self):
+    def test_array_of_len_1(self):
         array = [1]
-        self.assertTrue(self.checkArrayParity(self.solution.sortArrayByParity(array)))
+        self.assertTrue(
+            self.check_array_parity(self.solution.sort_array_by_parity(array)))
 
-    def testArrayInput(self):
-        array = [1,5,2,10]
-        self.assertTrue(self.checkArrayParity(self.solution.sortArrayByParity(array)))
+    def test_array_input(self):
+        array = [1, 5, 2, 10]
+        self.assertTrue(
+            self.check_array_parity(self.solution.sort_array_by_parity(array)))
 
     @staticmethod
-    def checkArrayParity(array: List[int]) -> bool:
+    def check_array_parity(array: List[int]) -> bool:
         odd_found = False
         for num in array:
             if odd_found and num % 2 == 0:

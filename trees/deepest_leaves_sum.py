@@ -22,7 +22,8 @@ class Solution:
     For a perfectly balanced tree, the upper bound is O(N)
     In the degenerate case, with a completely unbalanced tree, this is O(1)
     """
-    def deepestLeavesSum(self, root: Optional[TreeNode]) -> int:
+
+    def deepest_leaves_sum(self, root: Optional[TreeNode]) -> int:
         queue = deque()
         if root:
             queue.append(root)
@@ -44,7 +45,7 @@ class Solution:
 class TestSolution(TestCase):
     solution = Solution()
 
-    def testTreeDepthOf3(self):
+    def test_tree_depth_of_3(self):
         """
         [4,2,7,1,3,6,9]
                4
@@ -60,10 +61,10 @@ class TestSolution(TestCase):
         tree.left.right = TreeNode(3)
         tree.right.left = TreeNode(6)
         tree.right.right = TreeNode(9)
-        res = self.solution.deepestLeavesSum(tree)
+        res = self.solution.deepest_leaves_sum(tree)
         self.assertEqual(19, res)
 
-    def testIncompleteTreeDepthOf3(self):
+    def test_incomplete_tree_depth_of_3(self):
         """
         [4,2,7,1,3,None,9]
                4
@@ -78,15 +79,15 @@ class TestSolution(TestCase):
         tree.left.left = TreeNode(1)
         tree.left.right = TreeNode(3)
         tree.right.right = TreeNode(9)
-        res = self.solution.deepestLeavesSum(tree)
+        res = self.solution.deepest_leaves_sum(tree)
         self.assertEqual(13, res)
 
-    def testTreeDepthOf1(self):
+    def test_tree_depth_of_1(self):
         tree = TreeNode(20)
-        res = self.solution.deepestLeavesSum(tree)
+        res = self.solution.deepest_leaves_sum(tree)
         self.assertEqual(20, res)
 
-    def testEmptyTree(self):
+    def test_empty_tree(self):
         tree = None
-        res = self.solution.deepestLeavesSum(tree)
+        res = self.solution.deepest_leaves_sum(tree)
         self.assertEqual(0, res)

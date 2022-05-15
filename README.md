@@ -23,8 +23,24 @@ python -m unittest arrays-and-hashing.contains_duplicate
 
 To run a single test case:
 ```
-python -m unittest arrays-and-hashing.contains_duplicate.TestSolution.testContainsDuplicates
+python -m unittest arrays-and-hashing.contains_duplicate.TestSolution.test_contains_duplicates
 ```
+
+## Linting
+Using [yapf](https://github.com/google/yapf) for formatting. To install for this project, create and activate a virtual env.
+```
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Then run the linter over a file or recursively over a folder of choice.
+```
+yapf -i [file.py]
+yapf -ir [folder]
+```
+
+TODO: Add a pre-commit hook to run the linter.
 
 ## Addendum on Learning
 In some models of learning psychology, there are 3 stages of memory processing - encoding, storage, and retrieval.

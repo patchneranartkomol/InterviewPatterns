@@ -1,6 +1,7 @@
 from unittest import TestCase
 from typing import List
 
+
 class Solution:
     """
     https://leetcode.com/problems/two-sum/
@@ -24,7 +25,8 @@ class Solution:
     Space Complexity: O(N)
     N - size of input list - nums
     """
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+
+    def two_sum(self, nums: List[int], target: int) -> List[int]:
         nums_dict = {}
         for i, num in enumerate(nums):
             goal = target - num
@@ -36,22 +38,23 @@ class Solution:
 class TestSolution(TestCase):
     solution = Solution()
 
-    def testInput1(self):
-        input_arr = [2,7,11,15]
+    def test_input_1(self):
+        input_arr = [2, 7, 11, 15]
         target = 9
-        self.assertEqual(self.solution.twoSum(input_arr, target), [0, 1])
+        self.assertEqual(self.solution.two_sum(input_arr, target), [0, 1])
 
-    def testInput2(self):
-        input_arr = [3,2,4]
+    def test_input_2(self):
+        input_arr = [3, 2, 4]
         target = 6
-        self.assertEqual(self.solution.twoSum(input_arr, target), [1, 2])
+        self.assertEqual(self.solution.two_sum(input_arr, target), [1, 2])
 
-    def testInput3(self):
-        input_arr = [2,7,11,15]
+    def test_input_3(self):
+        input_arr = [2, 7, 11, 15]
         target = 22
-        self.assertEqual(self.solution.twoSum(input_arr, target), [1, 3])
+        self.assertEqual(self.solution.two_sum(input_arr, target), [1, 3])
 
-    def testInputWithDuplicate(self):
-        input_arr = [3,2,3]
+    def test_input_with_duplicate(self):
+        input_arr = [3, 2, 3]
         target = 6
-        self.assertEqual(sorted(self.solution.twoSum(input_arr, target)), [0, 2])
+        self.assertEqual(sorted(self.solution.two_sum(input_arr, target)),
+                         [0, 2])

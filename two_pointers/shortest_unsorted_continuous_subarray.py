@@ -4,7 +4,7 @@ from typing import List
 
 class Solution:
     """
-    https://leetcode.com/problems/sort-array-by-parity/
+    https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
 
     If the array is one element, return 0.
 
@@ -17,7 +17,8 @@ class Solution:
     Space Complexity: O(1)
     N - size of input list
     """
-    def findUnsortedSubarray(self, nums: List[int]) -> int:
+
+    def find_unsorted_subarray(self, nums: List[int]) -> int:
         if len(nums) <= 1:
             return 0
 
@@ -43,14 +44,14 @@ class Solution:
 class TestSolution(TestCase):
     solution = Solution()
 
-    def testArrayOfLen1(self):
+    def test_array_of_len_1(self):
         array = [1]
-        self.assertEqual(0, self.solution.findUnsortedSubarray(array))
+        self.assertEqual(0, self.solution.find_unsorted_subarray(array))
 
-    def testSortedInput(self):
-        array = [1,2,3,5,10]
-        self.assertEqual(0, self.solution.findUnsortedSubarray(array))
+    def test_sorted_input(self):
+        array = [1, 2, 3, 5, 10]
+        self.assertEqual(0, self.solution.find_unsorted_subarray(array))
 
-    def testInput1(self):
-        array = [2,6,4,8,10,9,15]
-        self.assertEqual(5, self.solution.findUnsortedSubarray(array))
+    def test_input_1(self):
+        array = [2, 6, 4, 8, 10, 9, 15]
+        self.assertEqual(5, self.solution.find_unsorted_subarray(array))

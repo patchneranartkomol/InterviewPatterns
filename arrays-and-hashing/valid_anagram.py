@@ -30,19 +30,20 @@ class Solution:
     Space Complexity - O(N)
     N - sum of length of input strings, s + t
     """
-    def isAnagram(self, s: str, t: str) -> bool:
+
+    def is_anagram(self, s: str, t: str) -> bool:
         return True if Counter(t) == Counter(s) else False
 
 
 class TestSolution(TestCase):
     solution = Solution()
 
-    def testAnagram(self):
+    def test_anagram(self):
         s = "anagram"
         t = "nagaram"
-        self.assertTrue(self.solution.isAnagram(s, t))
+        self.assertTrue(self.solution.is_anagram(s, t))
 
-    def testNotAnagram(self):
+    def test_not_anagram(self):
         s = "rat"
         t = "car"
-        self.assertFalse(self.solution.isAnagram(s, t))
+        self.assertFalse(self.solution.is_anagram(s, t))
