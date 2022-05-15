@@ -45,7 +45,7 @@ class TestSolution(TestCase):
 
     def testArrayOfLen1(self):
         array = [1]
-        self.assertEquals(0, self.solution.findUnsortedSubarray(array))
+        self.assertEqual(0, self.solution.findUnsortedSubarray(array))
 
     def testSortedInput(self):
         array = [1,2,3,5,10]
