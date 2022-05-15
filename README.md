@@ -1,4 +1,6 @@
 # Interview Patterns
+[![Build Status](https://app.travis-ci.com/patchneranartkomol/InterviewPatterns.svg?branch=main)](https://app.travis-ci.com/patchneranartkomol/InterviewPatterns)
+
 This is a list of implementations of data structures, algorithms, and solutions to problems using those building blocks. There are many lists and resources out there, and this one is no different.
 
 Hopefully, this list serves as a demonstration of learning psychology. The purpose of this list is to created and refined, but not to be reviewed, except as an outline, to help create a hierarchical structure of relevant concepts.
