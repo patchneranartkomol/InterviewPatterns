@@ -59,17 +59,22 @@ class TestSolution(TestCase):
         self.assertTrue(self.solution.isPalindrome(string))
         self.assertTrue(self.solution2.isPalindrome(string))
 
-    def testValidPalindromeWithNonAlphanumericChars(self):
-        string = "A man, a plan, a canal: Panama"
-        self.assertTrue(self.solution.isPalindrome(string))
-        self.assertTrue(self.solution2.isPalindrome(string))
-
     def testInvalidPalindromeWithoutNonAlphanumericChars(self):
         string = "racecara"
         self.assertFalse(self.solution.isPalindrome(string))
         self.assertFalse(self.solution2.isPalindrome(string))
 
-    def testInvalidPalindromeWithNonAlphanumericChars(self):
+    def testValidPalindromeWithNonAlphanumericChars(self):
+        string = "A man, a plan, a canal: Panama"
+        self.assertTrue(self.solution.isPalindrome(string))
+        self.assertTrue(self.solution2.isPalindrome(string))
+
+    def testInValidPalindromeWithNonAlphanumericChars(self):
+        string = "a  z."
+        self.assertTrue(self.solution.isPalindrome(string))
+        self.assertTrue(self.solution2.isPalindrome(string))
+
+    def testValidEmptyPalindromeWithNonAlphanumericChars(self):
         string = "  ."
         self.assertTrue(self.solution.isPalindrome(string))
         self.assertTrue(self.solution2.isPalindrome(string))
