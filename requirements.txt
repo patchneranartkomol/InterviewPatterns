@@ -1,2 +1,5 @@
+# Test Coverage
+coverage==6.3.3
+
 # Linter
 yapf==0.32.0
