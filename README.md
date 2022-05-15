@@ -21,6 +21,11 @@ To run a single module:
 python -m unittest arrays-and-hashing.contains_duplicate
 ```
 
+To run a single test case:
+```
+python -m unittest arrays-and-hashing.contains_duplicate.TestSolution.testContainsDuplicates
+```
+
 ## Addendum on Learning
 In some models of learning psychology, there are 3 stages of memory processing - encoding, storage, and retrieval.
 
