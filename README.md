@@ -1,6 +1,6 @@
 # Interview Patterns
 [![Build Status](https://app.travis-ci.com/patchneranartkomol/InterviewPatterns.svg?branch=main)](https://app.travis-ci.com/patchneranartkomol/InterviewPatterns)
-[![Coverage Status](https://coveralls.io/repos/github/patchneranartkomol/InterviewPatterns/badge.svg?branch=main)](https://coveralls.io/github/patchneranartkomol/InterviewPatterns?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/patchneranartkomol/InterviewPatterns/badge.svg?branch=main&kill_cache=1)](https://coveralls.io/github/patchneranartkomol/InterviewPatterns?branch=main&kill_cache=1)
 
 This is a list of implementations of data structures, algorithms, and solutions to problems using those building blocks. There are many lists and resources out there, and this one is no different.
 
