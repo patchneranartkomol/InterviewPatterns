@@ -131,5 +131,5 @@ class TestSolution(TestCase):
     def test_no_backspaces_different_input(self):
         s = "bxjtw"
         t = "bxjtwa"
-        self.assertTrue(self.solution.backspace_compare(s, t))
-        self.assertTrue(self.solution2.backspace_compare(s, t))
+        self.assertFalse(self.solution.backspace_compare(s, t))
+        self.assertFalse(self.solution2.backspace_compare(s, t))
