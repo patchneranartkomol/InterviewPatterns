@@ -17,8 +17,8 @@ class Solution:
     """
 
     def backspace_compare(self, s: str, t: str) -> bool:
-        return self.evalute_backspace_string(s) == self.evalute_backspace_string(
-            t)
+        return self.evalute_backspace_string(
+            s) == self.evalute_backspace_string(t)
 
     def evalute_backspace_string(self, s: str) -> List[str]:
         stack = []
@@ -119,5 +119,17 @@ class TestSolution(TestCase):
     def test_backspaces_past_empty_equal(self):
         s = "bxj#####tw"
         t = "bxj######tw"
+        self.assertTrue(self.solution.backspace_compare(s, t))
+        self.assertTrue(self.solution2.backspace_compare(s, t))
+
+    def test_no_backspaces_same_input(self):
+        s = "bxjtw"
+        t = "bxjtw"
+        self.assertTrue(self.solution.backspace_compare(s, t))
+        self.assertTrue(self.solution2.backspace_compare(s, t))
+
+    def test_no_backspaces_different_input(self):
+        s = "bxjtw"
+        t = "bxjtwa"
         self.assertTrue(self.solution.backspace_compare(s, t))
         self.assertTrue(self.solution2.backspace_compare(s, t))
