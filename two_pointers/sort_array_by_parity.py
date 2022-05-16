@@ -37,16 +37,17 @@ class TestSolution(TestCase):
         self.assertTrue(
             self.check_array_parity(self.solution.sort_array_by_parity(array)))
 
+    def test_array_input2(self):
+        array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        self.assertTrue(
+            self.check_array_parity(self.solution.sort_array_by_parity(array)))
+
     @staticmethod
     def check_array_parity(array: List[int]) -> bool:
         odd_found = False
         for num in array:
-            if odd_found and num % 2 == 0:
+            if odd_found and num % 2 == 0:  # pragma: no cover
                 return False
             if num % 2 != 0:
                 odd_found == True
         return True
-
-
-if __name__ == '__main__':
-    main()
