@@ -59,7 +59,7 @@ class Solution2:
                 elif deletes_s > 0:
                     deletes_s -= 1
                     i -= 1
-                else:
+                else: # pragma: no cover
                     break
             # Trim backspaces in t
             while j >= 0:
@@ -69,7 +69,7 @@ class Solution2:
                 elif deletes_t > 0:
                     deletes_t -= 1
                     j -= 1
-                else:
+                else: # pragma: no cover
                     break
 
             if i >= 0 and j >= 0 and s[i] != t[j]:
