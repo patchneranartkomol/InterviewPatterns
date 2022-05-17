@@ -30,6 +30,20 @@ python -m unittest arrays-and-hashing.contains_duplicate.TestSolution.test_conta
 ```
 
 ## Build Tooling
+
+### Install with the Makefile
+Create and install a virtual environment with Make.
+```
+make install
+```
+
+See documented help steps for other Makefile commands.
+```
+make help
+```
+
+### Installation by hand
+
 To install build tools for this project, create a virtual environment (1-time setup):
 ```
 python -m venv .venv
@@ -51,12 +65,14 @@ yapf -ir [folder]
 TODO: Add a pre-commit hook to run the linter.
 
 ### Test Coverage
+Using coverage.py for test coverage. When installed, use it to run the tests and generate a report.
 ```
 coverage run -m unittest discover -p "*.py"
-coverage report
+coverage report ## Generates and prints report
+coverage html ## Generates html report
 ```
 
-### Addendum on Learning
+## Addendum on Learning
 In some models of learning psychology, there are 3 stages of memory processing - encoding, storage, and retrieval.
 
 Effective encoding is the key to storing and working information effectively.
