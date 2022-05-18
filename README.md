@@ -42,7 +42,12 @@ See documented help steps for other Makefile commands.
 make help
 ```
 
-### Installation by hand
+Activate the virtual environment to run build tools such as the linter and coverage tests:
+```
+source .venv/bin/activate
+```
+
+### Manual Installation
 
 To install build tools for this project, create a virtual environment (1-time setup):
 ```
@@ -51,12 +56,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-This is currently used for linting and code coverage tests.
-
 ### Linting
 Using [yapf](https://github.com/google/yapf) for formatting.
 
-Run the linter over a file or recursively over a folder of choice.
+With the virtal env active, run the linter over a file or recursively over a folder of choice.
 ```
 yapf -i [file.py]
 yapf -ir [folder]
@@ -65,7 +68,7 @@ yapf -ir [folder]
 TODO: Add a pre-commit hook to run the linter.
 
 ### Test Coverage
-Using coverage.py for test coverage. When installed, use it to run the tests and generate a report.
+Using [coverage.py](https://coverage.readthedocs.io/) for test coverage. With the virutal env active, use these commands run the tests and generate a report.
 ```
 coverage run -m unittest discover -p "*.py"
 coverage report ## Generates and prints report
