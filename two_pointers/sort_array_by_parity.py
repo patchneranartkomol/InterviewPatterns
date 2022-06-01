@@ -49,5 +49,5 @@ class TestSolution(TestCase):
             if odd_found and num % 2 == 0:  # pragma: no cover
                 return False
             if num % 2 != 0:
-                odd_found == True
+                odd_found = True
         return True

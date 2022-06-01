@@ -29,46 +29,43 @@ To run a single test case:
 python -m unittest arrays-and-hashing.contains_duplicate.TestSolution.test_contains_duplicates
 ```
 
-## Build Tooling
+## Tooling
+Using several libraries that require installation for tooling and tests:
+* Linter
+* Formatter
+* Coverage Tests
 
-### Install with the Makefile
-Create and install a virtual environment with Make.
+### Installation
+Create and install a virtual environment with build tools and dependencies.
 ```
 make install
 ```
 
-See documented help steps for other Makefile commands.
-```
-make help
-```
-
-Activate the virtual environment to run build tools such as the linter and coverage tests:
+Activate the virtual environment:
 ```
 source .venv/bin/activate
 ```
 
-### Manual Installation
+### Linting and Formatting
+Using [flake8](https://github.com/pycqa/flake8) for linting.
 
-To install build tools for this project, create a virtual environment (1-time setup):
+To run the linter over the whole project:
 ```
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+flake8 .
 ```
 
-### Linting
 Using [yapf](https://github.com/google/yapf) for formatting.
 
-With the virtal env active, run the linter over a file or recursively over a folder of choice.
+To run the linter over a file or recursively over a folder of choice:
 ```
 yapf -i [file.py]
 yapf -ir [folder]
 ```
 
-TODO: Add a pre-commit hook to run the linter.
-
 ### Test Coverage
-Using [coverage.py](https://coverage.readthedocs.io/) for test coverage. With the virutal env active, use these commands run the tests and generate a report.
+Using [coverage.py](https://coverage.readthedocs.io/) for test coverage.
+
+To run tests and generate a test coverage report.
 ```
 coverage run -m unittest discover -p "*.py"
 coverage report ## Generates and prints report
