@@ -11,9 +11,8 @@ class Solution:
     If the total number of elements in the set == total possible binary codes,
     then s contains all binary codes.
 
-    Time Complexity: O(log(k) + s - k)
-    Space Complexity: O(k * S^k)
-    N - size of input list
+    Time Complexity: O(log(K) + S - K)
+    Space Complexity: O(K * S^K)
     """
 
     def has_all_codes(self, s: str, k: int) -> bool:
