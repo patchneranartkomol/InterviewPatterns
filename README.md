@@ -2,9 +2,9 @@
 [![Build Status](https://app.travis-ci.com/patchneranartkomol/InterviewPatterns.svg?branch=main)](https://app.travis-ci.com/patchneranartkomol/InterviewPatterns)
 [![Coverage Status](https://coveralls.io/repos/github/patchneranartkomol/InterviewPatterns/badge.svg?branch=main&kill_cache=1)](https://coveralls.io/github/patchneranartkomol/InterviewPatterns?branch=main&kill_cache=1)
 
-This is a list of implementations of data structures, algorithms, and solutions to problems using those building blocks. There are many lists and resources out there, and this one is no different.
+This is a list of implementations for common coding interview problems.
 
-Hopefully, this list serves as a demonstration of learning psychology. The purpose of this list is to created and refined, but not to be reviewed, except as an outline, to help create a hierarchical structure of relevant concepts.
+Each solution aims to be readable, use logically discrete functions, be fully covered by unit tests, and include a time and space complexity analysis, where that is apparent.
 
 ## Running Examples
 For now, there are Python3 examples in each subfolder, pertaining to a topic. There's no libraries to install, so as long as you have Python3 installed, you can run any of them code samples.
@@ -56,7 +56,7 @@ flake8 .
 
 Using [yapf](https://github.com/google/yapf) for formatting.
 
-To run the linter over a file or recursively over a folder of choice:
+To run the formatter over a file or recursively over a folder of choice:
 ```
 yapf -i [file.py]
 yapf -ir [folder]
