@@ -1,5 +1,5 @@
-from unittest import TestCase
 from typing import List
+from unittest import TestCase
 
 
 class Solution:
