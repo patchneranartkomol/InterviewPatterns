@@ -45,6 +45,22 @@ class TestSolution(TestCase):
         s = "()[]{}"
         self.assertTrue(self.solution.is_valid(s))
 
-    def test_invalid(self):
+    def test_invalid_bracket(self):
         s = "(]"
+        self.assertFalse(self.solution.is_valid(s))
+
+    def test_invalid_bracket2(self):
+        s = "[}"
+        self.assertFalse(self.solution.is_valid(s))
+
+    def test_invalid_bracket3(self):
+        s = "{)"
+        self.assertFalse(self.solution.is_valid(s))
+
+    def test_invalid_close(self):
+        s = "}(("
+        self.assertFalse(self.solution.is_valid(s))
+
+    def test_missing_open(self):
+        s = "([]"
         self.assertFalse(self.solution.is_valid(s))
